@@ -53,6 +53,15 @@ func main() {
 	//
 	//fmt.Printf("4 Dices Rolled: %v\n", rollDices(4))
 
+	var sampleInt int
+	var sampleString string
+	var sampleFloat float32
+
+	fmt.Println("default values")
+	fmt.Printf("default int '%v'\n", sampleInt)
+	fmt.Printf("default string '%v'\n", sampleString)
+	fmt.Printf("default float '%v'\n", sampleFloat)
+
 	// ARRAY
 	var myArray [3]string
 
