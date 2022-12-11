@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"math/rand"
 	"rsc.io/quote"
-	"strings"
 	"time"
 )
 
@@ -53,34 +52,49 @@ func main() {
 	//
 	//fmt.Printf("4 Dices Rolled: %v\n", rollDices(4))
 
-	var sampleInt int
-	var sampleString string
-	var sampleFloat float32
+	//var sampleInt int
+	//var sampleString string
+	//var sampleFloat float32
+	//
+	//fmt.Println("default values")
+	//fmt.Printf("default int '%v'\n", sampleInt)
+	//fmt.Printf("default string '%v'\n", sampleString)
+	//fmt.Printf("default float '%v'\n", sampleFloat)
 
-	fmt.Println("default values")
-	fmt.Printf("default int '%v'\n", sampleInt)
-	fmt.Printf("default string '%v'\n", sampleString)
-	fmt.Printf("default float '%v'\n", sampleFloat)
+	// interface
 
-	// ARRAY
-	var myArray [3]string
+	var sampleInterface interface{}
 
-	myArray = [3]string{"karadeniz", "teknik", "üniversitesi"}
+	sampleInterface = 5
 
-	//myArray = append(myArray, "trabzon")
-	for _, word := range myArray {
-		fmt.Printf("%v ", word)
+	fmt.Printf("interface value '%v'\n", sampleInterface)
+
+	sampleInterface = "this is its text"
+
+	fmt.Printf("interface value '%v'\n", sampleInterface)
+
+	// MAPS
+	// map string interface
+	var sampleMap map[string]interface{}
+
+	sampleMap = map[string]interface{}{"integer": 1, "string": "two", "float": 8.2, "array": [2]string{"one", "two"}, "map": map[string]interface{}{"literally": "everything"}}
+
+	for k, v := range sampleMap {
+		fmt.Printf("key[%s] value[%v]\n", k, v)
 	}
 
-	// SLICE
+	// map string string
+	stringMap := map[string]string{"key": "value", "anotherOne": "anotherValue"}
 
-	var mySlice []string
-	for _, word := range myArray {
-		mySlice = append(mySlice, word)
+	for k, v := range stringMap {
+		fmt.Printf("key[%s] value[%v]\n", k, v)
 	}
-	mySlice = append(mySlice, "trabzon")
 
-	concatenedText := strings.Join(mySlice, " ")
-	fmt.Println(concatenedText)
+	// map int int
+	intMap := map[int]int{0: 1000, 1: 1002}
+
+	for k, v := range intMap {
+		fmt.Printf("key[%s] value[%v]\n", k, v)
+	}
 
 }
