@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 	"rsc.io/quote"
+	"strings"
 	"time"
 )
 
@@ -43,13 +44,34 @@ func main() {
 	fmt.Println(helloString)
 	fmt.Println("---------------------")
 
-	rand.Seed(time.Now().UnixNano())
-	fmt.Println("A dice rolled: ", rollDice())
+	//rand.Seed(time.Now().UnixNano())
+	//fmt.Println("A dice rolled: ", rollDice())
+	//
+	//fmt.Printf("2 Dices Rolled: %v\n", rollDices(2))
+	//
+	//fmt.Printf("3 Dices Rolled: %v\n", rollDices(3))
+	//
+	//fmt.Printf("4 Dices Rolled: %v\n", rollDices(4))
 
-	fmt.Printf("2 Dices Rolled: %v\n", rollDices(2))
+	// ARRAY
+	var myArray [3]string
 
-	fmt.Printf("3 Dices Rolled: %v\n", rollDices(3))
+	myArray = [3]string{"karadeniz", "teknik", "üniversitesi"}
 
-	fmt.Printf("4 Dices Rolled: %v\n", rollDices(4))
+	//myArray = append(myArray, "trabzon")
+	for _, word := range myArray {
+		fmt.Printf("%v ", word)
+	}
+
+	// SLICE
+
+	var mySlice []string
+	for _, word := range myArray {
+		mySlice = append(mySlice, word)
+	}
+	mySlice = append(mySlice, "trabzon")
+
+	concatenedText := strings.Join(mySlice, " ")
+	fmt.Println(concatenedText)
 
 }
