@@ -7,9 +7,22 @@ import "time"
 func main() {
 	fmt.Println("Hello World")
 
-	fmt.Println(quote.Go())
+	//fmt.Println(quote.Go())
+	//
+	//fmt.Println(quote.Hello())
+	//
+	//fmt.Println(time.Now())
 
-	fmt.Println(quote.Hello())
+	var helloString string
 
-	fmt.Println(time.Now())
+	helloString = fmt.Sprintf("%s %s", quote.Hello(), time.Now())
+
+	//var helloString string;
+	//
+	//fillerText := "The exact time is"
+	//
+	//helloString = fmt.Sprintf("%s %s %s", quote.Hello(), fillerText, time.Now())
+
+	fmt.Println(helloString)
+
 }
