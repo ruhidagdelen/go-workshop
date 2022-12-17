@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"rsc.io/quote"
-	"time"
 )
 
 func rollDice() int {
@@ -22,7 +20,7 @@ func rollDices(diceCount int) []int {
 }
 
 func main() {
-	fmt.Println("Hello World")
+	//fmt.Println("Hello World")
 
 	//fmt.Println(quote.Go())
 	//
@@ -30,9 +28,9 @@ func main() {
 	//
 	//fmt.Println(time.Now())
 
-	var helloString string
-
-	helloString = fmt.Sprintf("%s %s", quote.Hello(), time.Now())
+	//var helloString string
+	//
+	//helloString = fmt.Sprintf("%s %s", quote.Hello(), time.Now())
 
 	//var helloString string;
 	//
@@ -40,8 +38,8 @@ func main() {
 	//
 	//helloString = fmt.Sprintf("%s %s %s", quote.Hello(), fillerText, time.Now())
 
-	fmt.Println(helloString)
-	fmt.Println("---------------------")
+	//fmt.Println(helloString)
+	//fmt.Println("---------------------")
 
 	//rand.Seed(time.Now().UnixNano())
 	//fmt.Println("A dice rolled: ", rollDice())
@@ -74,23 +72,25 @@ func main() {
 	fmt.Printf("interface value '%v'\n", sampleInterface)
 
 	// MAPS
-	// map string interface
-	var sampleMap map[string]interface{}
-
-	sampleMap = map[string]interface{}{"integer": 1, "string": "two", "float": 8.2, "array": [2]string{"one", "two"}, "map": map[string]interface{}{"literally": "everything"}}
-
-	for k, v := range sampleMap {
-		fmt.Printf("key[%s] value[%v]\n", k, v)
-	}
-
-	// map string string
-	stringMap := map[string]string{"key": "value", "anotherOne": "anotherValue"}
-
-	for k, v := range stringMap {
-		fmt.Printf("key[%s] value[%v]\n", k, v)
-	}
-
-	// map int int
+	//map string interface
+	//var sampleMap map[string]interface{}
+	//
+	//sampleMap = map[string]interface{}{"integer": 1, "string": "two", "float": 8.2,
+	//	"array": [2]string{"one", "two"},
+	//	"map":   map[string]interface{}{"literally": "everything"}}
+	//
+	//for k, v := range sampleMap {
+	//	fmt.Printf("key[%s] value[%v]\n", k, v)
+	//}
+	//
+	//// map string string
+	//stringMap := map[string]string{"key": "value", "anotherOne": "anotherValue"}
+	//
+	//for k, v := range stringMap {
+	//	fmt.Printf("key[%s] value[%v]\n", k, v)
+	//}
+	//
+	//// map int int
 	intMap := map[int]int{0: 1000, 1: 1002}
 
 	for k, v := range intMap {
