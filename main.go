@@ -1,24 +1,23 @@
 package main
 
 import (
+	_ "encoding/csv"
 	"fmt"
-	"github.com/asmcos/requests"
-	"go-workshop/models"
+	"go-workshop/helpers"
 )
 
 func main() {
-	fmt.Println("Hello World")
 
-	requestsItem := requests.Requests()
-
-	response, err := requestsItem.Get("https://google.com")
-	if err != nil {
-		fmt.Println("Request get error", err)
+	_, data := helpers.ReadFile()
+	for index, elem := range data {
+		if index > 0 && index < 4 {
+			err2, responseObj := helpers.GetRequestData(elem[1])
+			if err2 != nil {
+				fmt.Println("we got boom errored")
+				continue
+			}
+			fmt.Println(responseObj)
+		}
 	}
-
-	importantResponse := models.WebsiteResponse{}
-	importantResponse.Text = response.Text()
-	importantResponse.ResponseCode = response.R.StatusCode
-	importantResponse.Headers = response.R.Header
 
 }
