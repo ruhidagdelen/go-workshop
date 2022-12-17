@@ -22,6 +22,7 @@ func main() {
 				fmt.Println("we got boom errored")
 				continue
 			}
+			helpers.SaveWebsiteResponse(responseObj)
 			fmt.Println(responseObj)
 		}
 	}
