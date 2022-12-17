@@ -4,9 +4,15 @@ import (
 	_ "encoding/csv"
 	"fmt"
 	"go-workshop/helpers"
+	"go-workshop/models"
 )
 
 func main() {
+	helpers.InitializeDB()
+
+	db := helpers.GetDB()
+
+	_ = db.AutoMigrate(&models.WebsiteResponseTable{})
 
 	_, data := helpers.ReadFile()
 	for index, elem := range data {
