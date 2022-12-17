@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
-import "rsc.io/quote"
-import "time"
+import (
+	"fmt"
+	strftime "github.com/itchyny/timefmt-go"
+	"rsc.io/quote"
+	"time"
+)
 
 func main() {
 	fmt.Println("Hello World")
@@ -11,5 +14,5 @@ func main() {
 
 	fmt.Println(quote.Hello())
 
-	fmt.Println(time.Now())
+	fmt.Println(strftime.Format(time.Now(), "%Y-%m-%d %H:%M:%S"))
 }
