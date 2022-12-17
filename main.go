@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"rsc.io/quote"
 	"time"
 )
 
@@ -24,32 +23,18 @@ func rollDices(diceCount int) []int {
 func main() {
 	fmt.Println("Hello World")
 
-	//fmt.Println(quote.Go())
-	//
-	//fmt.Println(quote.Hello())
-	//
-	//fmt.Println(time.Now())
+	//var helloString string
 
-	var helloString string
-
-	helloString = fmt.Sprintf("%s %s", quote.Hello(), time.Now())
-
-	//var helloString string;
-	//
-	//fillerText := "The exact time is"
-	//
-	//helloString = fmt.Sprintf("%s %s %s", quote.Hello(), fillerText, time.Now())
-
-	fmt.Println(helloString)
-	fmt.Println("---------------------")
+	//helloString = fmt.Sprintf("%s %s", quote.Hello(), time.Now())
 
 	rand.Seed(time.Now().UnixNano())
+	//
 	fmt.Println("A dice rolled: ", rollDice())
 
 	fmt.Printf("2 Dices Rolled: %v\n", rollDices(2))
-
-	fmt.Printf("3 Dices Rolled: %v\n", rollDices(3))
-
-	fmt.Printf("4 Dices Rolled: %v\n", rollDices(4))
+	//
+	//fmt.Printf("3 Dices Rolled: %v\n", rollDices(3))
+	//
+	//fmt.Printf("4 Dices Rolled: %v\n", rollDices(4))
 
 }
